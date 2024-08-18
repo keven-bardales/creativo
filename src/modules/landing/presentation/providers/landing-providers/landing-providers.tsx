@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@landing/presentation/providers/theme-provider";
+import { ThemeProvider } from "@/modules/landing/presentation/providers/theme-providers/theme-provider";
 
 export default function LandingProviders({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

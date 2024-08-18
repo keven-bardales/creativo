@@ -22,7 +22,20 @@
   --border: 262 30% 50%;
   --input: 262 30% 18%;
   --ring: 262 83.8% 58.8%;
-  --radius: 1rem;
+  --radius: 1.5rem;
+
+  .cls-1 {
+    fill: #7e3eee;
+  }
+  
+  .cls-1, .cls-2 {
+    stroke-width: 0px;
+  }
+  
+  .cls-2 {
+    fill: 262 5% 0%;
+  }
+
 }
 .dark  {
   --background: 262 50% 5%;
@@ -44,5 +57,20 @@
   --border: 262 30% 18%;
   --input: 262 30% 18%;
   --ring: 262 83.8% 58.8%;
-  --radius: 1rem;
+  --radius: 1.5rem;
+
+
+  .cls-1 {
+    fill: #7e3eee;
+  }
+  
+  .cls-1, .cls-2 {
+    stroke-width: 0px;
+  }
+  
+  .cls-2 {
+    fill: #fff;
+  }
 }
+
+

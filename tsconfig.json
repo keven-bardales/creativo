@@ -19,7 +19,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@root/*": ["./*"],
       "@landing/*": ["./src/modules/landing/*"],
+      "@ui/*": ["./src/modules/shared/presentation/components/ui/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
