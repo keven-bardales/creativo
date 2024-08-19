@@ -5,7 +5,6 @@ import { ButtonVariants } from "@/modules/shared/presentation/components/ui/butt
 import { cn } from "@/lib/utils";
 
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
-import Card from "@/modules/shared/presentation/components/ui/card/card";
 import CardForStatistics from "./components/card-for-statistics/card-for-statistics";
 import DedicationCard from "./components/dedication-card/dedication-card";
 
