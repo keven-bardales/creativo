@@ -12,9 +12,9 @@ export default function OpeningSectionV2() {
   return (
     <>
       <LandingContainer className={cn("flex flex-col lg:flex-row justify-between")}>
-        <div className="flex flex-col gap-y-6 w-full lg:max-w-[44%] lg:pt-5">
+        <div className="flex flex-col gap-y-6 w-full lg:max-w-[44%] sm:pt-10 lg:pt-5">
           <div className="flex flex-col gap-y-4 w-full">
-            <div className="flex flex-col md:flex-row lg:flex-col flex-wrap gap-y-4 font-bold text-4xl sm:text-5xl xl:text-6xl mr-auto">
+            <div className="flex flex-row lg:flex-col flex-wrap gap-y-4 font-bold text-4xl sm:text-5xl xl:text-6xl mr-auto">
               <h1>El éxito de tu</h1>
               <h2>marca empieza</h2>
               <div className="flex gap-x-2 items-center">
