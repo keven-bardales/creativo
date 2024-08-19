@@ -10,11 +10,11 @@ import OpeningSectionV2 from "@/modules/landing/presentation/components/pages/ho
 
 export default function LandingMain() {
   return (
-    <main className="w-full min-h-screen max-h-screen overflow-auto gap-y-20 md:gap-y-0 flex flex-col">
-      <LandingSection className="md:h-[10vh]">
+    <main className="min-h-screen max-h-screen overflow-auto md:gap-y-0 flex flex-col">
+      <LandingSection className="">
         <LandingNavbar />
       </LandingSection>
-      <LandingSection className="md:h-[80vh] flex flex-col items-center justify-center gap-y-8">
+      <LandingSection className="flex flex-col gap-y-8">
         {/* <OpeningSection /> */}
         <OpeningSectionV2 />
       </LandingSection>

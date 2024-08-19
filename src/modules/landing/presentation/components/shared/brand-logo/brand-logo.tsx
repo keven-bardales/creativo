@@ -2,7 +2,7 @@ interface BrandLogoProps {}
 
 export default function BrandLogo(props: BrandLogoProps) {
   return (
-    <svg id="Logos" width={150} height={108} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 409.02">
+    <svg className="-mt-10" id="Logos" width={150} height={108} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 409.02">
       <g>
         <path
           className="cls-2"

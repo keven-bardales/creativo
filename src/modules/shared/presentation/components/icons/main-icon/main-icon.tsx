@@ -1,8 +1,9 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Globe } from "lucide-react";
 import { JSXElementConstructor } from "react";
 
 export enum AppIcons {
   ChevronRight = "ChevronRight",
+  Globe = "Globe",
 }
 
 interface IconProps {
@@ -15,6 +16,7 @@ interface AppIconsMap {
 
 const APPICONS = {
   [AppIcons.ChevronRight]: (props: IconProps) => <ChevronRight size={props.size} />,
+  [AppIcons.Globe]: (props: IconProps) => <Globe size={props.size} />,
 };
 
 interface IconComponentProps {
