@@ -61,12 +61,12 @@ export default function OpeningSectionV2() {
           </div>
         </div>
 
-        <div className="h-[85vh] w-full lg:w-[50%] min-h-[550px] max-h-[550px] overflow-hidden bg-background relative rounded-3xl mt-14 lg:mt-5">
+        <div className="h-[85vh] w-full lg:w-[50%] min-h-[550px] max-h-[550px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0">
           <div
             style={{
               backgroundImage: `url(${herobg.src})`,
             }}
-            className="w-full h-full bg-cover bg-center bg-no-repeat rounded-3xl"
+            className="w-full h-full bg-cover bg-center rounded-3xl"
           ></div>
           <div className="bg-background top-0 left-0 z-[10] absolute h-[20%] w-[30%] rounded-br-3xl"></div>
           <div className="absolute z-[10] top-0 h-[25px] left-[30%] w-[25px] rounded-[50%] shadow-hero-rounded-top"></div>
