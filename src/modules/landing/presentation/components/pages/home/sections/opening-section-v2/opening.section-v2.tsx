@@ -60,7 +60,7 @@ export default function OpeningSectionV2() {
           </div>
         </div>
 
-        <div className="h-[85vh] w-full lg:w-[50%] min-h-[550px] max-h-[550px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0">
+        <div className="h-[85vh] w-full lg:w-[50%] min-h-[600px] max-h-[600px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0">
           <div
             style={{
               backgroundImage: `url(${herobg.src})`,
