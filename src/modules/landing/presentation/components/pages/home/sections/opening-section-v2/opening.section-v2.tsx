@@ -39,7 +39,7 @@ export default function OpeningSectionV2() {
             </Button>
           </div>
 
-          <div className="flex gap-2 lg:gap-x-5 pt-10 font-bold md:font-normal flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto">
+          <div className="flex justify-center gap-2 lg:gap-x-5 pt-10 font-bold md:semi-bold flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto lg:justify-start lg:ml-0 lg:mr-0">
             <div>Social Media</div>
 
             <div className="font-bold">/</div>
@@ -85,11 +85,11 @@ export default function OpeningSectionV2() {
         <CardForStatistics
           descriptionClassName="text-xl text-center"
           titleClassName="font-bold text-4xl sm:text-5xl xl:text-6xl text-center"
-          className="block lg:hidden w-full mt-14"
+          className="block lg:hidden w-full mt-14 md:max-w-[80%] mx-auto"
           contentClassName="gap-y-5"
         />
 
-        <DedicationCard className="block md:hidden mt-10" />
+        <DedicationCard className="block sm:max-w-[80%] md:hidden mt-10 mx-auto" />
       </LandingContainer>
     </>
   );
