@@ -12,7 +12,7 @@ interface CardForStatisticsProps {
 export default function CardForStatistics(props: CardForStatisticsProps) {
   return (
     <Card
-      className={cn("md:absolute hidden md:block md:bottom-[7%] w-[50%] md:h-[260px] bg-background border-0 md:left-[5%] p-3", {
+      className={cn("lg:absolute hidden lg:block lg:bottom-[7%] w-[50%] lg:h-[260px] bg-background border-0 lg:left-[5%] p-3", {
         [`${props?.className}`]: !!props?.className,
       })}
     >

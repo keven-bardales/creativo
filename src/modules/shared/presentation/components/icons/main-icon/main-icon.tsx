@@ -8,6 +8,7 @@ export enum AppIcons {
 
 interface IconProps {
   size?: number;
+  className?: string;
 }
 
 interface AppIconsMap {
@@ -15,17 +16,18 @@ interface AppIconsMap {
 }
 
 const APPICONS = {
-  [AppIcons.ChevronRight]: (props: IconProps) => <ChevronRight size={props.size} />,
-  [AppIcons.Globe]: (props: IconProps) => <Globe size={props.size} />,
+  [AppIcons.ChevronRight]: (props: IconProps) => <ChevronRight size={props.size} className={props.className} />,
+  [AppIcons.Globe]: (props: IconProps) => <Globe size={props.size} className={props.className} />,
 };
 
 interface IconComponentProps {
   name: AppIcons;
   size?: number;
+  className?: string;
 }
 
 export default function Icon(props: IconComponentProps) {
   const Comp = APPICONS?.[props.name];
 
-  return <Comp size={props.size} />;
+  return <Comp size={props.size} className={props.className} />;
 }

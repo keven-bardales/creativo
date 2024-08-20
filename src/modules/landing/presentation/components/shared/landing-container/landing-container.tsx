@@ -9,7 +9,7 @@ interface LandingContainerProps {
 export default function LandingContainer(props: LandingContainerProps) {
   return (
     <div
-      className={cn("container w-full mx-auto", {
+      className={cn("container w-full mx-auto p-3", {
         [`${props?.className}`]: !!props?.className,
       })}
     >

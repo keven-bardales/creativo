@@ -15,11 +15,11 @@ const navBarItems = [{ name: "Blog" }, { name: "Documentation" }, { name: "Prici
 export default function LandingNavbar(props: LandingNavbarProps) {
   return (
     <LandingContainer
-      className={cn("flex w-full justify-between gap-y-3 relative flex-wrap lg:flex-nowrap items-start pt-5", {
+      className={cn("flex w-full justify-between gap-y-3 relative flex-wrap lg:flex-nowrap items-center pt-3", {
         [`${props.className}`]: !!props.className,
       })}
     >
-      <BrandLogo />
+      <BrandLogo mode="horizontal" />
       <nav className="flex-grow justify-center md:flex hidden">
         <ul className="flex items-center gap-x-4 font-bold">
           {navBarItems.map((item) => {

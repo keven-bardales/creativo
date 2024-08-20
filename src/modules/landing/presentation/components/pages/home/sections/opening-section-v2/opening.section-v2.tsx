@@ -12,34 +12,34 @@ export default function OpeningSectionV2() {
   return (
     <>
       <LandingContainer className={cn("flex flex-col lg:flex-row justify-between")}>
-        <div className="flex flex-col gap-y-6 w-full lg:max-w-[44%] sm:pt-10 lg:pt-5">
+        <div className="flex flex-col gap-y-6 w-full lg:max-w-[44%] lg:pt-5">
           <div className="flex flex-col gap-y-4 w-full">
-            <div className="flex flex-row lg:flex-col flex-wrap gap-y-4 font-bold text-4xl sm:text-5xl xl:text-6xl mr-auto">
+            <div className="flex flex-col text-center items-center md:text-7xl lg:text-left lg:items-start gap-4 font-bold text-4xl sm:text-6xl lg:text-6xl">
               <h1>El éxito de tu</h1>
               <h2>marca empieza</h2>
-              <div className="flex gap-x-2 items-center">
+              <div className="flex items-center gap-2">
                 <h2>aquí</h2>
-                <div className="font-normal">
-                  <hr className="md:w-[350px] lg:w-[250px] w-[140px] sm:w-[150px] border-foreground border-2" />
+                <div>
+                  <hr className="border-foreground border-2 w-[140px] sm:w-[150px] md:w-[250px]" />
                 </div>
                 <Icon name={AppIcons.Globe} size={52} />
               </div>
             </div>
 
-            <h3 className="font-light text-foreground text-lg w-full lg:max-w-[80%]">
+            <h3 className="font-light text-foreground text-center lg:text-left md:text-xl lg:text-lg w-full lg:max-w-[80%]">
               {" "}
               Incrementa tu base de clientes con <strong className="text-primary font-bold">Creativo</strong> y estrategias dirigidas.
             </h3>
           </div>
 
-          <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5">
+          <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto">
             <Button className="grow shrink-0">Obtén mi propuesta gratuita</Button>
             <Button className="grow shrink-0" variant={ButtonVariants.OUTLINE}>
               Explicame Como funciona
             </Button>
           </div>
 
-          <div className="flex gap-x-5 pt-10 font-bold md:font-normal flex-wrap text-foreground gap-y-3 text-sm items-center md:text-xl lg:max-w-[80%]">
+          <div className="flex gap-2 lg:gap-x-5 pt-10 font-bold md:font-normal flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto">
             <div>Social Media</div>
 
             <div className="font-bold">/</div>
@@ -83,9 +83,9 @@ export default function OpeningSectionV2() {
         </div>
 
         <CardForStatistics
-          descriptionClassName="text-xl"
-          titleClassName="font-bold text-3xl"
-          className="block md:hidden w-full mt-14"
+          descriptionClassName="text-xl text-center"
+          titleClassName="font-bold text-4xl sm:text-5xl xl:text-6xl text-center"
+          className="block lg:hidden w-full mt-14"
           contentClassName="gap-y-5"
         />
 

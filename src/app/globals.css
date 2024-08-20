@@ -25,7 +25,7 @@
   --radius: 1.5rem;
 
   .cls-1 {
-    fill: #7e3eee;
+    fill: 262 5% 0%;
   }
   
   .cls-1, .cls-2 {
@@ -33,7 +33,7 @@
   }
   
   .cls-2 {
-    fill: 262 5% 0%;
+    fill: #7e3eee;
   }
 
 }
@@ -61,7 +61,7 @@
 
 
   .cls-1 {
-    fill: #7e3eee;
+    fill: #fff;
   }
   
   .cls-1, .cls-2 {
@@ -69,7 +69,7 @@
   }
   
   .cls-2 {
-    fill: #fff;
+    fill: #7e3eee;
   }
 }
 
