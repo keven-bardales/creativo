@@ -2,6 +2,7 @@ import LandingSection from "@/modules/landing/presentation/components/shared/lan
 import LandingNavbar from "@/modules/landing/presentation/components/shared/navbar/landing-navbar";
 import OpeningSectionV2 from "@/modules/landing/presentation/components/pages/home/sections/opening-section-v2/opening.section-v2";
 import { AboutDigitalMarketingSection } from "@/modules/landing/presentation/components/pages/home/sections/about-digital-marketing/about-digital-marketing.section";
+import { MainBlogItem } from "@/modules/landing/presentation/components/pages/home/sections/main-blog-item/main-blog-item.section";
 
 export default function LandingMain() {
   return (
@@ -12,8 +13,11 @@ export default function LandingMain() {
       <LandingSection className="flex flex-col gap-y-8">
         <OpeningSectionV2 />
       </LandingSection>
-      <LandingSection className="flex flex-col gap-y-8 mt-10">
+      <LandingSection className="flex flex-col gap-y-8 mt-20">
         <AboutDigitalMarketingSection />
+      </LandingSection>
+      <LandingSection className="flex flex-col gap-y-8 mt-20">
+        <MainBlogItem />
       </LandingSection>
     </main>
   );

@@ -32,8 +32,8 @@ export default function OpeningSectionV2() {
             </h3>
           </div>
 
-          <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto">
-            <Button className="grow shrink-0">Obtén mi propuesta gratuita</Button>
+          <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto lg:ml-0 lg:mr-0">
+            <Button className="grow shrink-0">Obtén tu propuesta gratuita</Button>
             <Button className="grow shrink-0" variant={ButtonVariants.OUTLINE}>
               Explicame Como funciona
             </Button>

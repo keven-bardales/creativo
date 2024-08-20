@@ -12,19 +12,19 @@ export function AboutDigitalMarketingSection() {
         <h3 className="text-primary">hacen crecer tu negocio</h3>
       </div>
 
-      <div className="w-full flex mt-10">
-        <Card className="min-h-[400px] w-full max-w-[47%] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex p-3 gap-x-5">
+      <div className="w-full flex-col lg:flex-row flex mt-10 gap-x-7 gap-y-5">
+        <Card className="h-auto md:min-h-[400px] w-full lg:max-w-[48%] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl gap-x-5 flex flex-col md:flex-row">
           <div
             style={{
               backgroundImage: `url(${herobg.src})`,
             }}
-            className="w-[35%] h-full bg-card rounded-3xl shrink-0 bg-cover bg-center"
+            className="md:w-[35%] w-full h-[300px] rounded-t-3xl md:!rounded-r-none  md:h-full bg-card md:!rounded-l-3xl shrink-0 bg-cover bg-center"
           ></div>
-          <div className="flex flex-col justify-between">
-            <div className="p-4 rounded-3xl bg-primary w-fit">
+          <div className="flex flex-col justify-between p-3 gap-y-5">
+            <div className="p-4 rounded-3xl bg-primary w-fit mx-auto md:ml-0 md:mr-0">
               <Icon className="text-primary-foreground" size={40} name={AppIcons.Globe} />
             </div>
-            <div className="flex gap-x-4">
+            <div className="flex gap-x-4 justify-center md:justify-start">
               <div className="flex flex-col gap-y-2">
                 <div className="font-bold text-4xl">+237%</div>
                 <div className="text-sm">Top 5 word rankings</div>
@@ -44,6 +44,40 @@ export function AboutDigitalMarketingSection() {
             </div>
           </div>
         </Card>
+
+        <div className="flex flex-col md:flex-row lg:max-w-[48%] gap-x-7 gap-y-5">
+          <Card className="min-h-[400px] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full p-3 gap-x-5">
+            <div className="flex flex-col justify-between">
+              <div className="p-4 rounded-3xl bg-primary w-fit mx-auto md:ml-0 md:mr-0">
+                <Icon className="text-primary-foreground" size={40} name={AppIcons.Globe} />
+              </div>
+
+              <div className="flex flex-col">
+                <h3 className="font-bold text-xl">Multi Location Practice Group</h3>
+                <p className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque porro nihil blanditiis dolorem similique nemo inventore aut amet
+                  mollitia tempora, consequuntur quo id vero reiciendis? Excepturi consequatur eaque ullam itaque?
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="min-h-[400px] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full p-3 gap-x-5">
+            <div className="flex flex-col justify-between">
+              <div className="p-4 rounded-3xl bg-primary w-fit mx-auto md:ml-0 md:mr-0">
+                <Icon className="text-primary-foreground" size={40} name={AppIcons.Globe} />
+              </div>
+
+              <div className="flex flex-col">
+                <h3 className="font-bold text-xl">Multi Location Practice Group</h3>
+                <p className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque porro nihil blanditiis dolorem similique nemo inventore aut amet
+                  mollitia tempora, consequuntur quo id vero reiciendis? Excepturi consequatur eaque ullam itaque?
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </LandingContainer>
   );
