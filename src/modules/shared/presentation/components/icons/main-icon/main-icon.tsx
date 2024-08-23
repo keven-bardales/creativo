@@ -1,9 +1,17 @@
-import { ChevronRight, Globe } from "lucide-react";
+import { BarChart, Brush, ChevronRight, Code, ExternalLink, FileText, Globe, Layers, Search, ShoppingCart } from "lucide-react";
 import { JSXElementConstructor } from "react";
-
 export enum AppIcons {
   ChevronRight = "ChevronRight",
   Globe = "Globe",
+  Brush = "Brush",
+  Code = "Code",
+  ShoppingCart = "ShoppingCart",
+  Search = "Search",
+  Facebook = "Facebook",
+  FileText = "FileText",
+  Layers = "Layers",
+  BarChart = "BarChart",
+  ExternalLink = "ExternalLink",
 }
 
 interface IconProps {
@@ -18,6 +26,15 @@ interface AppIconsMap {
 const APPICONS = {
   [AppIcons.ChevronRight]: (props: IconProps) => <ChevronRight size={props.size} className={props.className} />,
   [AppIcons.Globe]: (props: IconProps) => <Globe size={props.size} className={props.className} />,
+  [AppIcons.Brush]: (props: IconProps) => <Brush size={props.size} className={props.className} />,
+  [AppIcons.Code]: (props: IconProps) => <Code size={props.size} className={props.className} />,
+  [AppIcons.ShoppingCart]: (props: IconProps) => <ShoppingCart size={props.size} className={props.className} />,
+  [AppIcons.Search]: (props: IconProps) => <Search size={props.size} className={props.className} />,
+  [AppIcons.Facebook]: (props: IconProps) => <Brush size={props.size} className={props.className} />,
+  [AppIcons.FileText]: (props: IconProps) => <FileText size={props.size} className={props.className} />,
+  [AppIcons.Layers]: (props: IconProps) => <Layers size={props.size} className={props.className} />,
+  [AppIcons.BarChart]: (props: IconProps) => <BarChart size={props.size} className={props.className} />,
+  [AppIcons.ExternalLink]: (props: IconProps) => <ExternalLink size={props.size} className={props.className} />,
 };
 
 interface IconComponentProps {

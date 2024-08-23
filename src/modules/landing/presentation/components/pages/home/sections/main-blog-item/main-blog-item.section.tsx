@@ -3,7 +3,6 @@ import LandingContainer from "../../../../shared/landing-container/landing-conta
 import Card from "@/modules/shared/presentation/components/ui/card/card";
 import Button from "@/modules/shared/presentation/components/ui/button/button";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
-import Image from "next/image";
 
 export function MainBlogItem() {
   return (
