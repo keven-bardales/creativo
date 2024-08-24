@@ -18,7 +18,7 @@ export default function OpeningSectionV2() {
             <div className="flex flex-col text-center items-center md:text-7xl lg:text-left lg:items-start gap-4 font-bold text-4xl sm:text-6xl lg:text-6xl">
               <FadeIn as="h1">El éxito de tu</FadeIn>
               <FadeIn as="h2">marca empieza</FadeIn>
-              <FadeIn as="h1" className="flex items-center gap-2">
+              <FadeIn as="div" className="flex items-center gap-2">
                 <h2>aquí</h2>
                 <div>
                   <hr className="border-foreground border-2 w-[140px] sm:w-[150px] md:w-[250px]" />

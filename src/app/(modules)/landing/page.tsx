@@ -1,5 +1,4 @@
 import LandingSection from "@/modules/landing/presentation/components/shared/landing-section/landing-section";
-import LandingNavbar from "@/modules/landing/presentation/components/shared/navbar/landing-navbar";
 import OpeningSectionV2 from "@/modules/landing/presentation/components/pages/home/sections/opening-section-v2/opening.section-v2";
 import { AboutDigitalMarketingSection } from "@/modules/landing/presentation/components/pages/home/sections/about-digital-marketing/about-digital-marketing.section";
 import { MainBlogItem } from "@/modules/landing/presentation/components/pages/home/sections/main-blog-item/main-blog-item.section";
