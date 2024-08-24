@@ -3,16 +3,17 @@ import LandingContainer from "../../../../shared/landing-container/landing-conta
 import Card from "@/modules/shared/presentation/components/ui/card/card";
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
+import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 
 export function AboutDigitalMarketingSection() {
   return (
     <LandingContainer className={cn("flex flex-col justify-between")}>
-      <div className="flex flex-col gap-y-3 text-center font-bold text-4xl sm:text-5xl xl:text-6xl">
+      <FadeIn as="div" className="flex flex-col gap-y-3 text-center font-bold text-4xl sm:text-5xl xl:text-6xl">
         <h2>Como los servicios de marketing</h2>
         <h3 className="text-primary">hacen crecer tu negocio</h3>
-      </div>
+      </FadeIn>
 
-      <div className="w-full flex-col lg:flex-row flex mt-10 gap-x-7 gap-y-8">
+      <FadeIn as="div" className="w-full flex-col lg:flex-row flex mt-10 gap-x-7 gap-y-8">
         <Card className="h-auto md:min-h-[400px] w-full lg:max-w-[48%] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl gap-x-5 flex flex-col md:flex-row">
           <div
             style={{
@@ -78,7 +79,7 @@ export function AboutDigitalMarketingSection() {
             </div>
           </Card>
         </div>
-      </div>
+      </FadeIn>
     </LandingContainer>
   );
 }

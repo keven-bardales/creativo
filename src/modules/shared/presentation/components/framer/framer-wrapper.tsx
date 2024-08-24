@@ -3,9 +3,11 @@
 import React, { ReactHTML } from "react";
 import { HTMLMotionProps, motion } from "framer-motion";
 
-type MotionComponentProps<TagName extends keyof ReactHTML> = HTMLMotionProps<TagName>;
+export type TagNameType = keyof ReactHTML;
 
-interface FramerProps<TagName extends keyof ReactHTML> {
+export type MotionComponentProps<TagName extends TagNameType> = HTMLMotionProps<TagName>;
+
+export interface FramerProps<TagName extends keyof ReactHTML> {
   as: TagName;
   children?: React.ReactNode;
   props?: MotionComponentProps<TagName>;

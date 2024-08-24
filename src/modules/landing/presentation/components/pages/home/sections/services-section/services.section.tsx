@@ -5,6 +5,7 @@ import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/m
 import { SERVICES } from "@/modules/landing/presentation/constants/services.constant";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
 import Image from "next/image";
+import { FadeInStagger, FadeInStaggredChildren } from "@/modules/shared/presentation/components/framer/fade-in";
 
 export function ServicesSection() {
   const ArrayFill = (length: number) => Array.from({ length }, (_, i) => i);
@@ -18,13 +19,14 @@ export function ServicesSection() {
         <h3 className="text-primary">nuestros servicios</h3>
       </div>
 
-      <div className="relative flex-col sm:flex-row gap-y-8 md:flex-row flex flex-wrap justify-evenly lg:gap-y-4 w-full">
+      <FadeInStagger as="div" className="relative flex-col sm:flex-row gap-y-8 md:flex-row flex flex-wrap justify-evenly lg:gap-y-4 w-full">
         {SERVICES.map((item, index) => {
           return (
-            <Card
+            <FadeInStaggredChildren
+              as={"div"}
               key={`Service-section${index}`}
               className={cn(
-                "relative transition-transform duration-300 ease-in-out bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full sm:max-w-[47%] lg:max-w-[23%] p-3 gap-x-5 h-fit min-h-[400px]",
+                "relative transition-transform duration-300 ease-in-out bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full sm:max-w-[47%] lg:max-w-[23%] p-3 gap-x-5 h-fit min-h-[400px] rounded-3xl",
                 {
                   "z-30 lg:translate-y-4 lg:transform lg:scale-110 lg:scale-x-[1.15] !bg-primary text-primary-foreground": item?.scaleUp, // Alto z-index para la tarjeta que contiene imágenes
                   "z-10": !item?.scaleUp, // Z-index bajo para otras tarjetas
@@ -71,10 +73,10 @@ export function ServicesSection() {
                   />
                 </>
               )}
-            </Card>
+            </FadeInStaggredChildren>
           );
         })}
-      </div>
+      </FadeInStagger>
     </LandingContainer>
   );
 }

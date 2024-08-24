@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
 import CardForStatistics from "./components/card-for-statistics/card-for-statistics";
 import DedicationCard from "./components/dedication-card/dedication-card";
+import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 
 export default function OpeningSectionV2() {
   return (
@@ -15,15 +16,15 @@ export default function OpeningSectionV2() {
         <div className="flex flex-col gap-y-6 w-full lg:max-w-[44%] lg:pt-5">
           <div className="flex flex-col gap-y-4 w-full">
             <div className="flex flex-col text-center items-center md:text-7xl lg:text-left lg:items-start gap-4 font-bold text-4xl sm:text-6xl lg:text-6xl">
-              <h1>El éxito de tu</h1>
-              <h2>marca empieza</h2>
-              <div className="flex items-center gap-2">
+              <FadeIn as="h1">El éxito de tu</FadeIn>
+              <FadeIn as="h2">marca empieza</FadeIn>
+              <FadeIn as="h1" className="flex items-center gap-2">
                 <h2>aquí</h2>
                 <div>
                   <hr className="border-foreground border-2 w-[140px] sm:w-[150px] md:w-[250px]" />
                 </div>
                 <Icon name={AppIcons.Globe} size={52} />
-              </div>
+              </FadeIn>
             </div>
 
             <h3 className="font-light text-foreground text-center lg:text-left md:text-xl lg:text-lg w-full lg:max-w-[80%]">
@@ -39,7 +40,10 @@ export default function OpeningSectionV2() {
             </Button>
           </div>
 
-          <div className="flex justify-center gap-2 lg:gap-x-5 pt-10 font-bold md:semi-bold flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto lg:justify-start lg:ml-0 lg:mr-0">
+          <FadeIn
+            as="div"
+            className="flex justify-center gap-2 lg:gap-x-5 pt-10 font-bold md:semi-bold flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto lg:justify-start lg:ml-0 lg:mr-0"
+          >
             <div>Social Media</div>
 
             <div className="font-bold">/</div>
@@ -57,10 +61,13 @@ export default function OpeningSectionV2() {
             <div className="font-bold">/</div>
 
             <div>Pay per click</div>
-          </div>
+          </FadeIn>
         </div>
 
-        <div className="h-[85vh] w-full lg:w-[50%] min-h-[600px] max-h-[600px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0">
+        <FadeIn
+          as="div"
+          className="h-[85vh] w-full lg:w-[50%] min-h-[600px] max-h-[600px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0"
+        >
           <div
             style={{
               backgroundImage: `url(${herobg.src})`,
@@ -80,7 +87,7 @@ export default function OpeningSectionV2() {
           <div className="absolute z-[10] bottom-0 h-[25px] right-[40%] w-[25px] bg-transparent rounded-[50%] shadow-hero-rounded-bottom"></div>
 
           <CardForStatistics />
-        </div>
+        </FadeIn>
 
         <CardForStatistics
           descriptionClassName="text-xl text-center"
