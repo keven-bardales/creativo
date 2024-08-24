@@ -5,6 +5,9 @@ import { cn } from "@/lib/utils";
 import { ButtonVariants } from "@/modules/shared/presentation/components/ui/button/button-variants.enum";
 import NavbarItem from "@landing/presentation/components/shared/navbar-item/navbar-item";
 import LandingContainer from "../landing-container/landing-container";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
+
+import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 
 interface LandingNavbarProps {
   className?: string;
@@ -21,11 +24,7 @@ export default function LandingNavbar(props: LandingNavbarProps) {
     >
       <BrandLogo mode="horizontal" />
       <nav className="flex-grow justify-center md:flex hidden">
-        <ul className="flex items-center gap-x-4 font-bold">
-          {navBarItems.map((item) => {
-            return <NavbarItem key={item.name}>{item.name}</NavbarItem>;
-          })}
-        </ul>
+        <LandingNavBarItems items={navBarItems} />
       </nav>
       <div className="flex items-center gap-x-4">
         <ModeToggle />
@@ -33,7 +32,40 @@ export default function LandingNavbar(props: LandingNavbarProps) {
           Sign In
         </Button>
         <Button className="hidden md:flex">Sign Up</Button>
+        <Sheet>
+          <SheetTrigger className="md:hidden">
+            <Icon name={AppIcons.Menu} size={24} />
+          </SheetTrigger>
+          <SheetContent className="md:hidden w-[250px]" side={"left"}>
+            <SheetHeader>
+              <BrandLogo className="mx-auto" mode="horizontal" />
+            </SheetHeader>
+
+            <div className="w-full flex justify-center mt-5">
+              <LandingNavBarItems className="flex flex-col gap-y-4" items={navBarItems} />
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </LandingContainer>
+  );
+}
+
+interface LandingNavBarItemsProps {
+  className?: string;
+  items: { name: string }[];
+}
+
+export function LandingNavBarItems(props: LandingNavBarItemsProps) {
+  return (
+    <ul
+      className={cn("flex items-center gap-x-4 font-bold", {
+        [`${props.className}`]: !!props.className,
+      })}
+    >
+      {props?.items.map((item) => {
+        return <NavbarItem key={item.name}>{item.name}</NavbarItem>;
+      })}
+    </ul>
   );
 }

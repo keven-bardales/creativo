@@ -24,7 +24,7 @@ export const SERVICES = [
     description: "Mejoramos la visibilidad de tu sitio web en los motores de búsqueda a través de prácticas SEO estratégicas.",
   },
   {
-    icon: AppIcons.Facebook,
+    icon: AppIcons.UsersRound,
     name: "Marketing en Redes Sociales",
     description: "Creamos y gestionamos campañas en redes sociales para aumentar la presencia de tu marca y atraer a tu audiencia objetivo.",
   },

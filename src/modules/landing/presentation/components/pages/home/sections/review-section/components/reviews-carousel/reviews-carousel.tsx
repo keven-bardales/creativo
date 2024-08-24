@@ -23,10 +23,13 @@ export default function ReviewsCarousel() {
 
   return (
     <Carousel setApi={setApi} className="w-full mt-5 relative" opts={{ slidesToScroll: 1 }}>
-      <CarouselContent className="w-full flex p-10 pb-14">
+      <CarouselContent className="w-full flex lg:p-10 pb-14 lg:pb-16 ml-4 gap-x-4">
         {REVIEWS.map((review) => (
-          <CarouselItem key={review.comment} className="flex shadow-2xl dark:bg-secondary rounded-3xl flex-col gap-y-5 p-4 mr-5 ml-5 max-w-[90%]">
-            <div className="text-5xl">
+          <CarouselItem
+            key={review.comment}
+            className="flex shadow-2xl dark:bg-secondary rounded-3xl flex-col gap-y-5 p-4 max-w-[90%] sm:max-w-[55%]"
+          >
+            <div className="text-lg lg:text-4xl">
               {'"'}
               {review.comment}
               {'"'}
@@ -47,11 +50,10 @@ export default function ReviewsCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-
-      <div className="absolute -bottom-[10%] right-[10%] flex p-4 z-10 mt-5">
-        <CarouselPrevious className="bg-primary text-white p-2 rounded-full">{/* Previous button content */}</CarouselPrevious>
+      <div className="absolute -bottom-[10%] left-[50%] right-[50%] md:left-auto md:right-[7%] lg:right-[6%] p-4 z-10 mt-5 min-w-fit flex justify-evenly">
+        <CarouselPrevious className="bg-primary text-primary-foreground p-2 rounded-full">{/* Previous button content */}</CarouselPrevious>
         {current}/{count}
-        <CarouselNext className="bg-primary text-white p-2 rounded-full">{/* Next button content */}</CarouselNext>
+        <CarouselNext className="bg-primary text-primary-foreground p-2 rounded-full">{/* Next button content */}</CarouselNext>
       </div>
     </Carousel>
   );

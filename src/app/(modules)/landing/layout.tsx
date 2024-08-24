@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import LandingProviders from "@/modules/landing/presentation/providers/landing-providers/landing-providers";
+import LandingSection from "@/modules/landing/presentation/components/shared/landing-section/landing-section";
+import LandingNavbar from "@/modules/landing/presentation/components/shared/navbar/landing-navbar";
+import LandingFooter from "@/modules/landing/presentation/components/shared/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,5 +18,17 @@ export default function LandingLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <LandingProviders>{children}</LandingProviders>;
+  return (
+    <LandingProviders>
+      <main className="min-h-screen max-h-screen overflow-auto md:gap-y-0 flex flex-col">
+        <LandingSection className="">
+          <LandingNavbar />
+        </LandingSection>
+        {children}
+        <LandingSection className="mt-24">
+          <LandingFooter />
+        </LandingSection>
+      </main>
+    </LandingProviders>
+  );
 }

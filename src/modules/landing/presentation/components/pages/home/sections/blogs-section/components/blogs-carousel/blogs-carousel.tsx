@@ -25,36 +25,43 @@ export default function BlogsCarousel() {
   }, [api]);
 
   return (
-    <Carousel
-      setApi={setApi}
-      className="w-full"
-      opts={{
-        slidesToScroll: 1,
-      }}
-    >
-      <CarouselContent className="w-full flex">
-        {BLOGS.map((blog) => (
-          <CarouselItem key={blog.id} className="flex flex-col gap-y-3 max-w-[45%] p-4 box-border">
-            <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto min-h-[400px] w-full" />
+    <div className="flex flex-col relative w-full justify-center">
+      <Carousel
+        setApi={setApi}
+        className="w-full mt-10"
+        opts={{
+          slidesToScroll: 1,
+        }}
+      >
+        <CarouselContent className="w-full flex p-6 pb-16 gap-x-5">
+          {BLOGS.map((blog) => (
+            <CarouselItem
+              key={blog.id}
+              className="flex flex-col w-full gap-y-3 max-w-[95%] sm:max-w-[45%] lg:max-w-[40%] p-5 box-border shadow-2xl rounded-2xl dark:bg-secondary"
+            >
+              <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto lg:min-h-[250px] w-full" />
 
-            <div className="flex gap-x-3 w-full items-start">
-              <div>
-                <h3 className="text-lg font-bold">{blog.title}</h3>
-                <p className="text-sm">{blog.excerpt}</p>
+              <div className="flex gap-x-3 w-full items-start">
+                <div className="flex flex-col gap-y-3">
+                  <h3 className="sm:text-lg font-bold">{blog.title}</h3>
+                  <p className="text-sm">{blog.excerpt}</p>
+                </div>
+                <Link className="bg-primary text-primary-foreground rounded-3xl p-3 !max-h-fit mt-2" href={`/blog/${blog.id}`}>
+                  <Icon name={AppIcons.ExternalLink} className="h-4 w-4 md:h-4 md:w-4" />
+                </Link>
               </div>
-              <Link className="bg-primary text-primary-foreground rounded-3xl p-3 !max-h-fit mt-2" href={`/blog/${blog.id}`}>
-                <Icon name={AppIcons.ExternalLink} size={24} />
-              </Link>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
 
-      <div className="absolute -top-[13%] right-[10%] flex p-4 z-10 mt-5">
-        <CarouselPrevious className="bg-primary text-white p-2 rounded-full">{/* Previous button content */}</CarouselPrevious>
-        {current}/{count}
-        <CarouselNext className="bg-primary text-white p-2 rounded-full">{/* Next button content */}</CarouselNext>
-      </div>
-    </Carousel>
+        <div className="top-[-7%] absolute mx-auto right-[50%] left-[50%] md:left-auto md:right-[7%] lg:right-[6%] min-w-fit flex justify-evenly">
+          <CarouselPrevious className="bg-primary text-primary-foreground p-2 rounded-full">{/* Previous button content */}</CarouselPrevious>
+          <div>
+            {current}/{count}
+          </div>
+          <CarouselNext className="bg-primary text-primary-foreground p-2 rounded-full">{/* Next button content */}</CarouselNext>
+        </div>
+      </Carousel>
+    </div>
   );
 }

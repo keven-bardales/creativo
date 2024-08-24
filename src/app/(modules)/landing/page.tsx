@@ -9,10 +9,7 @@ import { ReviewSection } from "@/modules/landing/presentation/components/pages/h
 
 export default function LandingMain() {
   return (
-    <main className="min-h-screen max-h-screen overflow-auto md:gap-y-0 flex flex-col pb-10">
-      <LandingSection className="">
-        <LandingNavbar />
-      </LandingSection>
+    <>
       <LandingSection className="flex flex-col gap-y-8">
         <OpeningSectionV2 />
       </LandingSection>
@@ -25,12 +22,12 @@ export default function LandingMain() {
       <LandingSection className="flex flex-col gap-y-8 mt-16 lg:mt-24">
         <ServicesSection />
       </LandingSection>
-      <LandingSection className="flex flex-col gap-y-8 mt-16 lg:mt-24">
+      <LandingSection className="flex flex-col gap-y-8 mt-10 lg:mt-24">
         <BlogSection />
       </LandingSection>
-      <LandingSection className="flex flex-col gap-y-8 mt-24">
+      <LandingSection className="flex flex-col gap-y-8 mt-0 lg:mt-16">
         <ReviewSection />
       </LandingSection>
-    </main>
+    </>
   );
 }

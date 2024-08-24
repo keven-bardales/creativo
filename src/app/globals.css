@@ -24,17 +24,6 @@
   --ring: 262 83.8% 58.8%;
   --radius: 1.5rem;
 
-  .cls-1 {
-    fill: 262 5% 0%;
-  }
-  
-  .cls-1, .cls-2 {
-    stroke-width: 0px;
-  }
-  
-  .cls-2 {
-    fill: #7e3eee;
-  }
 
 }
 .dark  {

@@ -1,4 +1,4 @@
-import { BarChart, Brush, ChevronRight, Code, ExternalLink, FileText, Globe, Layers, Search, ShoppingCart } from "lucide-react";
+import { BarChart, Brush, ChevronRight, Code, ExternalLink, FileText, Globe, Layers, Menu, Search, ShoppingCart, UsersRound } from "lucide-react";
 import { JSXElementConstructor } from "react";
 export enum AppIcons {
   ChevronRight = "ChevronRight",
@@ -12,6 +12,8 @@ export enum AppIcons {
   Layers = "Layers",
   BarChart = "BarChart",
   ExternalLink = "ExternalLink",
+  UsersRound = "UsersRound",
+  Menu = "Menu",
 }
 
 interface IconProps {
@@ -35,6 +37,8 @@ const APPICONS = {
   [AppIcons.Layers]: (props: IconProps) => <Layers size={props.size} className={props.className} />,
   [AppIcons.BarChart]: (props: IconProps) => <BarChart size={props.size} className={props.className} />,
   [AppIcons.ExternalLink]: (props: IconProps) => <ExternalLink size={props.size} className={props.className} />,
+  [AppIcons.UsersRound]: (props: IconProps) => <UsersRound size={props.size} className={props.className} />,
+  [AppIcons.Menu]: (props: IconProps) => <Menu size={props.size} className={props.className} />,
 };
 
 interface IconComponentProps {
