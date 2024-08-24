@@ -16,16 +16,16 @@ export default function LandingMain() {
       <LandingSection className="flex flex-col gap-y-8">
         <OpeningSectionV2 />
       </LandingSection>
-      <LandingSection className="flex flex-col gap-y-8 mt-24">
+      <LandingSection className="flex flex-col gap-y-8 mt-16 lg:mt-24">
         <AboutDigitalMarketingSection />
       </LandingSection>
-      <LandingSection className="flex flex-col gap-y-8 mt-24">
+      <LandingSection className="flex flex-col gap-y-8 mt-16 lg:mt-24">
         <MainBlogItem />
       </LandingSection>
-      <LandingSection className="flex flex-col gap-y-8 mt-24">
+      <LandingSection className="flex flex-col gap-y-8 mt-16 lg:mt-24">
         <ServicesSection />
       </LandingSection>
-      <LandingSection className="flex flex-col gap-y-8 mt-24">
+      <LandingSection className="flex flex-col gap-y-8 mt-16 lg:mt-24">
         <BlogSection />
       </LandingSection>
       <LandingSection className="flex flex-col gap-y-8 mt-24">

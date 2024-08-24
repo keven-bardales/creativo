@@ -1,14 +1,32 @@
 "use client";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { BLOGS } from "@/modules/landing/presentation/constants/blogs.constant";
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
-import { Link2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function BlogsCarousel() {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", (tes) => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   return (
     <Carousel
+      setApi={setApi}
       className="w-full"
       opts={{
         slidesToScroll: 1,
@@ -16,8 +34,8 @@ export default function BlogsCarousel() {
     >
       <CarouselContent className="w-full flex">
         {BLOGS.map((blog) => (
-          <CarouselItem key={blog.id} className="flex flex-col gap-y-3 max-w-[50%] p-4 box-border">
-            <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto min-h-[600px] w-full" />
+          <CarouselItem key={blog.id} className="flex flex-col gap-y-3 max-w-[45%] p-4 box-border">
+            <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto min-h-[400px] w-full" />
 
             <div className="flex gap-x-3 w-full items-start">
               <div>
@@ -31,8 +49,12 @@ export default function BlogsCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">{/* Add Next button content */}</CarouselNext>
-      <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">{/* Add Previous button content */}</CarouselPrevious>
+
+      <div className="absolute -top-[13%] right-[10%] flex p-4 z-10 mt-5">
+        <CarouselPrevious className="bg-primary text-white p-2 rounded-full">{/* Previous button content */}</CarouselPrevious>
+        {current}/{count}
+        <CarouselNext className="bg-primary text-white p-2 rounded-full">{/* Next button content */}</CarouselNext>
+      </div>
     </Carousel>
   );
 }

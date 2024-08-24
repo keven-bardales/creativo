@@ -27,7 +27,7 @@ export default function CardForStatistics(props: CardForStatisticsProps) {
               [`${props?.titleClassName}`]: !!props?.titleClassName,
             })}
           >
-            Crecimiento estadístico
+            Crecimiento <span className="text-primary">estadístico</span>
           </h2>
           <h3
             className={cn("text-sm font-light", {

@@ -18,25 +18,25 @@ export function ServicesSection() {
         <h3 className="text-primary">nuestros servicios</h3>
       </div>
 
-      <div className="relative flex flex-wrap justify-evenly gap-y-4">
+      <div className="relative flex-col gap-y-8 md:flex-row flex flex-wrap justify-evenly lg:gap-y-4 w-full">
         {SERVICES.map((item, index) => {
           return (
             <Card
               key={`Service-section${index}`}
               className={cn(
-                "relative transition-transform duration-300 ease-in-out bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full max-w-[23%] p-3 gap-x-5 h-fit min-h-[400px]",
+                "relative transition-transform duration-300 ease-in-out bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full lg:max-w-[23%] p-3 gap-x-5 h-fit min-h-[400px]",
                 {
-                  "z-10 translate-y-4 transform scale-110 scale-x-[1.15] !bg-primary text-primary-foreground": item?.scaleUp,
-                  "z-0": !item?.scaleUp,
+                  "z-30 md:translate-y-4 md:transform md:scale-110 md:scale-x-[1.15] !bg-primary text-primary-foreground": item?.scaleUp, // Alto z-index para la tarjeta que contiene imágenes
+                  "z-10": !item?.scaleUp, // Z-index bajo para otras tarjetas
+                  "z-30": item?.imagesOnTop,
                 }
               )}
             >
               <div className="flex flex-col justify-between">
                 <Icon
-                  className={cn("text-primary mt-3", {
+                  className={cn("text-primary mx-auto mt-auto mb-auto h-24 w-24", {
                     "text-primary-foreground": item?.scaleUp,
                   })}
-                  size={40}
                   name={item?.icon}
                 />
 
@@ -53,21 +53,21 @@ export function ServicesSection() {
                     alt="hero"
                     width={500}
                     height={300}
-                    className="rounded-sm absolute left-[10%] top-0 max-w-[55%] -rotate-12"
+                    className="rounded-sm absolute left-[10%] top-0 max-w-[55%] -rotate-12 z-40" // Z-index superior para las imágenes
                   />
                   <Image
                     src={herobg.src}
                     alt="hero"
                     width={500}
                     height={300}
-                    className="rounded-sm absolute left-[20%] top-[34%] max-w-[55%] rotate-2"
+                    className="rounded-sm absolute left-[20%] top-[34%] max-w-[55%] rotate-2 z-40" // Z-index superior para las imágenes
                   />
                   <Image
                     src={herobg.src}
                     alt="hero"
                     width={500}
                     height={300}
-                    className="rounded-sm absolute left-[10%] top-[70%] max-w-[55%] rotate-[25deg] z-[30]"
+                    className="rounded-sm absolute left-[10%] top-[70%] max-w-[55%] rotate-[25deg] z-40" // Z-index superior para las imágenes
                   />
                 </>
               )}
