@@ -8,10 +8,6 @@ import Image from "next/image";
 import { FadeInStagger, FadeInStaggredChildren } from "@/modules/shared/presentation/components/framer/fade-in";
 
 export function ServicesSection() {
-  const ArrayFill = (length: number) => Array.from({ length }, (_, i) => i);
-
-  const items = ArrayFill(8);
-
   return (
     <LandingContainer className={cn("flex flex-col gap-y-3")}>
       <div className="flex flex-col gap-y-3 text-center font-bold text-4xl sm:text-5xl xl:text-6xl col-span-full mb-4">
