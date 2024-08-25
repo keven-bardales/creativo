@@ -33,7 +33,6 @@ export default function BrandLogo(props: BrandLogoProps) {
   return (
     <div
       onClick={() => {
-        console.log("click");
         handleElementIntoView("main");
         setIsOpenMobileMenu(false);
       }}
