@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning={true} lang="en">
+    <html suppressHydrationWarning={true} lang="es">
       <body className={`${cn("bg-background", inter.className)}`}>{children}</body>
     </html>
   );

@@ -9,8 +9,8 @@ export function AboutDigitalMarketingSection() {
   return (
     <LandingContainer className={cn("flex flex-col justify-between")}>
       <FadeIn as="div" className="flex flex-col gap-y-3 text-center font-bold text-4xl sm:text-5xl xl:text-6xl">
-        <h2>Como los servicios de marketing</h2>
-        <h3 className="text-primary">hacen crecer tu negocio</h3>
+        <h2>Cómo nuestros servicios de marketing</h2>
+        <h3 className="text-primary">impulsan el crecimiento de tu negocio</h3>
       </FadeIn>
 
       <FadeIn as="div" className="w-full flex-col lg:flex-row flex mt-10 gap-x-7 gap-y-8">
@@ -27,20 +27,20 @@ export function AboutDigitalMarketingSection() {
             </div>
             <div className="flex gap-x-4 justify-center md:justify-start">
               <div className="flex flex-col gap-y-2">
-                <div className="font-bold text-4xl">+237%</div>
-                <div className="text-sm">Top 5 word rankings</div>
+                <div className="font-bold text-4xl">+200%</div>
+                <div className="text-sm">Incremento en conversiones</div>
               </div>
               <div className="flex flex-col gap-y-2">
-                <div className="font-bold text-4xl">+124%</div>
-                <div className="text-sm">Monthly leads</div>
+                <div className="font-bold text-4xl">+150%</div>
+                <div className="text-sm">Crecimiento en tráfico web</div>
               </div>
             </div>
 
             <div className="flex flex-col">
-              <h3 className="font-bold text-xl">Multi Location Practice Group</h3>
+              <h3 className="font-bold text-xl">Estrategias de Marketing Digital</h3>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque porro nihil blanditiis dolorem similique nemo inventore aut amet
-                mollitia tempora, consequuntur quo id vero reiciendis? Excepturi consequatur eaque ullam itaque?
+                Nuestro enfoque personalizado asegura que cada campaña sea optimizada para maximizar el retorno de inversión. Desde la creación de
+                contenido hasta la gestión de redes sociales, nuestros servicios están diseñados para que tu negocio crezca de manera sostenida.
               </p>
             </div>
           </div>
@@ -54,10 +54,10 @@ export function AboutDigitalMarketingSection() {
               </div>
 
               <div className="flex flex-col">
-                <h3 className="font-bold text-xl">Multi Location Practice Group</h3>
+                <h3 className="font-bold text-xl">Desarrollo Web Integral</h3>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque porro nihil blanditiis dolorem similique nemo inventore aut amet
-                  mollitia tempora, consequuntur quo id vero reiciendis? Excepturi consequatur eaque ullam itaque?
+                  Creamos sitios web optimizados para la conversión, asegurando que tu presencia en línea sea una herramienta efectiva para atraer y
+                  retener clientes. Desde el diseño hasta la implementación, cada paso está orientado a maximizar el impacto.
                 </p>
               </div>
             </div>
@@ -70,10 +70,10 @@ export function AboutDigitalMarketingSection() {
               </div>
 
               <div className="flex flex-col">
-                <h3 className="font-bold text-xl">Multi Location Practice Group</h3>
+                <h3 className="font-bold text-xl">SEO y Posicionamiento</h3>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque porro nihil blanditiis dolorem similique nemo inventore aut amet
-                  mollitia tempora, consequuntur quo id vero reiciendis? Excepturi consequatur eaque ullam itaque?
+                  Aumenta tu visibilidad en los motores de búsqueda y alcanza a más clientes potenciales. Nuestra experiencia en SEO te ayudará a
+                  escalar posiciones y a mantenerte por encima de la competencia en los resultados de búsqueda.
                 </p>
               </div>
             </div>

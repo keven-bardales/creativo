@@ -13,42 +13,43 @@ export default function OpeningSectionV2() {
   return (
     <>
       <LandingContainer className={cn("flex flex-col lg:flex-row justify-between")}>
-        <div className="flex flex-col gap-y-6 w-full lg:max-w-[44%] lg:pt-5">
-          <div className="flex flex-col gap-y-4 w-full">
+        <div className="flex flex-col lg:gap-y-6 w-full lg:max-w-[44%] lg:pt-5">
+          <FadeIn as="div" className="flex flex-col gap-y-4 w-full">
             <div className="flex flex-col text-center items-center md:text-7xl lg:text-left lg:items-start gap-4 font-bold text-4xl sm:text-6xl lg:text-6xl">
-              <FadeIn as="h1">El éxito de tu</FadeIn>
-              <FadeIn as="h2">marca empieza</FadeIn>
-              <FadeIn as="div" className="flex items-center gap-2">
+              <h1>El éxito de tu</h1>
+              <h2>marca empieza</h2>
+              <div className="flex items-center gap-2">
                 <h2>aquí</h2>
                 <div>
                   <hr className="border-foreground border-2 w-[140px] sm:w-[150px] md:w-[250px]" />
                 </div>
                 <Icon name={AppIcons.Globe} size={52} />
-              </FadeIn>
+              </div>
             </div>
 
             <h3 className="font-light text-foreground text-center lg:text-left md:text-xl lg:text-lg w-full lg:max-w-[80%]">
               {" "}
               Incrementa tu base de clientes con <strong className="text-primary font-bold">Creativo</strong> y estrategias dirigidas.
             </h3>
-          </div>
+          </FadeIn>
 
-          <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto lg:ml-0 lg:mr-0">
+          <FadeIn as="div" className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto lg:ml-0 lg:mr-0">
             <Button className="grow shrink-0">Obtén tu propuesta gratuita</Button>
             <Button className="grow shrink-0" variant={ButtonVariants.OUTLINE}>
               Explicame Como funciona
             </Button>
-          </div>
+          </FadeIn>
 
           <FadeIn
+            delay={0.1}
             as="div"
             className="flex justify-center gap-2 lg:gap-x-5 pt-10 font-bold md:semi-bold flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto lg:justify-start lg:ml-0 lg:mr-0"
           >
-            <div>Social Media</div>
+            <div>Diseño web</div>
 
             <div className="font-bold">/</div>
 
-            <div>Content Writing</div>
+            <div>Marketing</div>
 
             <div className="font-bold">/</div>
 
@@ -56,15 +57,16 @@ export default function OpeningSectionV2() {
 
             <div className="font-bold">/</div>
 
-            <div>Video Production</div>
+            <div>Desarrollo web</div>
 
             <div className="font-bold">/</div>
 
-            <div>Pay per click</div>
+            <div>Identidad de marca</div>
           </FadeIn>
         </div>
 
         <FadeIn
+          delay={0.1}
           as="div"
           className="h-[85vh] w-full lg:w-[50%] min-h-[600px] max-h-[600px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0"
         >

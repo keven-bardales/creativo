@@ -1,11 +1,13 @@
 import { cn } from "@/lib/utils";
+import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 
 interface DedicationCardProps {
   className?: string;
 }
 export default function DedicationCard(props: DedicationCardProps) {
   return (
-    <div
+    <FadeIn
+      as="div"
       className={cn("w-full h-full hidden md:block bg-primary rounded-3xl p-3 text-primary-foreground", {
         [`${props?.className}`]: !!props?.className,
       })}
@@ -15,6 +17,6 @@ export default function DedicationCard(props: DedicationCardProps) {
       <p className="text-sm sm:text-base md:text-sm">
         Nos dedicamos a cada proyecto con pasión y precisión, garantizando resultados que superan tus expectativas.
       </p>
-    </div>
+    </FadeIn>
   );
 }

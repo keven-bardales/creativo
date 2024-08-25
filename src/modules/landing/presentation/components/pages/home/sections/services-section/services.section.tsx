@@ -49,22 +49,22 @@ export function ServicesSection() {
                   <Image
                     src={herobg.src}
                     alt="hero"
-                    width={500}
-                    height={300}
+                    width={512}
+                    height={512}
                     className="rounded-sm absolute left-[10%] top-0 max-w-[35%] sm:max-w-[55%] -rotate-12 z-40" // Z-index superior para las imágenes
                   />
                   <Image
                     src={herobg.src}
                     alt="hero"
-                    width={500}
-                    height={300}
+                    width={512}
+                    height={512}
                     className="rounded-sm absolute left-[20%] top-[34%] max-w-[35%] sm:max-w-[55%] rotate-2 z-40" // Z-index superior para las imágenes
                   />
                   <Image
                     src={herobg.src}
                     alt="hero"
-                    width={500}
-                    height={300}
+                    width={512}
+                    height={512}
                     className="rounded-sm absolute left-[10%] top-[70%] max-w-[35%] sm:max-w-[55%] rotate-[25deg] z-40" // Z-index superior para las imágenes
                   />
                 </>

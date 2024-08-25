@@ -1,6 +1,7 @@
 "use client";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { REVIEWS } from "@/modules/landing/presentation/constants/reviews.constant";
+import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 import React from "react";
 
 export default function ReviewsCarousel() {
@@ -29,12 +30,12 @@ export default function ReviewsCarousel() {
             key={review.comment}
             className="flex shadow-2xl dark:bg-secondary rounded-3xl flex-col gap-y-5 p-4 max-w-[90%] sm:max-w-[55%]"
           >
-            <div className="text-lg lg:text-4xl">
+            <FadeIn as="div" className="text-lg lg:text-4xl">
               {'"'}
               {review.comment}
               {'"'}
-            </div>
-            <div className="flex gap-x-2 items-center">
+            </FadeIn>
+            <FadeIn as="div" className="flex gap-x-2 items-center">
               <div className="font-bold bg-primary text-primary-foreground rounded-full p-5">
                 {review?.customerName
                   ?.split(" ")
@@ -46,13 +47,15 @@ export default function ReviewsCarousel() {
                 <div className="font-bold text-lg">{review.customerName}</div>
                 <div className="text-lg text-muted-foreground">{review.type}</div>
               </div>
-            </div>
+            </FadeIn>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="absolute -bottom-[10%] left-[50%] right-[50%] md:left-auto md:right-[7%] lg:right-[6%] p-4 z-10 mt-5 min-w-fit flex justify-evenly">
+      <div className="absolute -bottom-[10%] left-[45%] right-[45%] md:left-auto md:right-[7%] lg:right-[6%] p-4 z-10 mt-5 min-w-fit flex justify-evenly text-center">
         <CarouselPrevious className="bg-primary text-primary-foreground p-2 rounded-full">{/* Previous button content */}</CarouselPrevious>
-        {current}/{count}
+        <div>
+          {current}/{count}
+        </div>
         <CarouselNext className="bg-primary text-primary-foreground p-2 rounded-full">{/* Next button content */}</CarouselNext>
       </div>
     </Carousel>

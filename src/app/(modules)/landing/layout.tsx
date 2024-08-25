@@ -20,8 +20,8 @@ export default function LandingLayout({
 }>) {
   return (
     <LandingProviders>
-      <main className="min-h-screen max-h-screen overflow-auto md:gap-y-0 flex flex-col">
-        <LandingSection className="">
+      <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col">
+        <LandingSection id="nav" className="fixed top-0 z-[50] bg-background">
           <LandingNavbar />
         </LandingSection>
         {children}

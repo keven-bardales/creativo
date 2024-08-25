@@ -1,10 +1,12 @@
 "use client";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { BLOGS } from "@/modules/landing/presentation/constants/blogs.constant";
+import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import BlogReadMoreItem from "./components/blog-carousel-read-more";
 
 export default function BlogsCarousel() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -39,17 +41,17 @@ export default function BlogsCarousel() {
               key={blog.id}
               className="flex flex-col w-full gap-y-3 max-w-[95%] sm:max-w-[45%] lg:max-w-[40%] p-5 box-border shadow-2xl rounded-2xl dark:bg-secondary"
             >
-              <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto lg:min-h-[250px] w-full" />
+              <FadeIn as="div" className="flex flex-col gap-y-3">
+                <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto lg:min-h-[250px] w-full" />
 
-              <div className="flex gap-x-3 w-full items-start">
-                <div className="flex flex-col gap-y-3">
-                  <h3 className="sm:text-lg font-bold">{blog.title}</h3>
-                  <p className="text-sm">{blog.excerpt}</p>
+                <div className="flex gap-x-3 w-full items-start">
+                  <div className="flex flex-col gap-y-3">
+                    <h3 className="sm:text-lg font-bold">{blog.title}</h3>
+                    <p className="text-sm">{blog.excerpt}</p>
+                  </div>
+                  <BlogReadMoreItem blog={blog} />
                 </div>
-                <Link className="bg-primary text-primary-foreground rounded-3xl p-3 !max-h-fit mt-2" href={`/blog/${blog.id}`}>
-                  <Icon name={AppIcons.ExternalLink} className="h-4 w-4 md:h-4 md:w-4" />
-                </Link>
-              </div>
+              </FadeIn>
             </CarouselItem>
           ))}
         </CarouselContent>

@@ -1,4 +1,7 @@
+"use client";
 import { cn } from "@/lib/utils";
+import { useLandingNavStore } from "../../../stores/nav-bar.store";
+import handleElementIntoView from "@/modules/shared/presentation/utils/handle-into-view/handle-element-into-view";
 
 interface BrandLogoProps {
   className?: string;
@@ -8,9 +11,12 @@ interface BrandLogoProps {
   logoClassName?: string;
   dotClassName?: string;
   letterClassName?: string;
+  onClick?: () => void;
 }
 
 export default function BrandLogo(props: BrandLogoProps) {
+  const setIsOpenMobileMenu = useLandingNavStore((state) => state.setIsOpenMobileMenu);
+
   const getComponent = () => {
     switch (props.mode) {
       case "horizontal":
@@ -24,7 +30,17 @@ export default function BrandLogo(props: BrandLogoProps) {
 
   const Component = getComponent();
 
-  return <Component {...props} />;
+  return (
+    <div
+      onClick={() => {
+        console.log("click");
+        handleElementIntoView("main");
+        setIsOpenMobileMenu(false);
+      }}
+    >
+      <Component {...props} />
+    </div>
+  );
 }
 
 function BrandLogoVertical(props: BrandLogoProps) {

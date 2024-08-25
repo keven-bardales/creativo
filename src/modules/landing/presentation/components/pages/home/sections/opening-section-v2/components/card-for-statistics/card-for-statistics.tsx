@@ -1,6 +1,7 @@
 import Card from "@/modules/shared/presentation/components/ui/card/card";
 import { MainStatisticsChart } from "../../../../charts/main-statistics-chart/main-statistics-chart";
 import { cn } from "@/lib/utils";
+import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 
 interface CardForStatisticsProps {
   className?: string;
@@ -16,7 +17,8 @@ export default function CardForStatistics(props: CardForStatisticsProps) {
         [`${props?.className}`]: !!props?.className,
       })}
     >
-      <div
+      <FadeIn
+        as="div"
         className={cn("flex flex-col", {
           [`${props?.contentClassName}`]: !!props?.contentClassName,
         })}
@@ -38,7 +40,7 @@ export default function CardForStatistics(props: CardForStatisticsProps) {
           </h3>
         </div>
         <MainStatisticsChart />
-      </div>
+      </FadeIn>
     </Card>
   );
 }

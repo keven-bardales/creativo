@@ -65,7 +65,7 @@ export const FadeInStaggredChildren: React.FC<FadeInProps> = ({ as, children, ..
   );
 };
 
-export const FadeIn: React.FC<FadeInProps> = ({ as, children, className, delay = 0, duration = 0.3, ...props }) => {
+export const FadeIn: React.FC<FadeInProps> = ({ as, children, className, delay = 0.2, duration = 0.3, ...props }) => {
   const shouldReduceMotion = useReducedMotion();
   const isInStaggerGroup = useContext(FadeInStaggerContext);
 

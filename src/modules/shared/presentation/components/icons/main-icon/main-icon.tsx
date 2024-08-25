@@ -1,4 +1,23 @@
-import { BarChart, Brush, ChevronRight, Code, ExternalLink, FileText, Globe, Layers, Menu, Search, ShoppingCart, UsersRound } from "lucide-react";
+import {
+  BarChart,
+  Brush,
+  CalendarCheck,
+  ChevronRight,
+  Code,
+  ExternalLink,
+  Eye,
+  FilePenLine,
+  FileText,
+  Globe,
+  Handshake,
+  Layers,
+  Menu,
+  Search,
+  SearchCheck,
+  ShoppingCart,
+  Star,
+  UsersRound,
+} from "lucide-react";
 import { JSXElementConstructor } from "react";
 export enum AppIcons {
   ChevronRight = "ChevronRight",
@@ -14,6 +33,12 @@ export enum AppIcons {
   ExternalLink = "ExternalLink",
   UsersRound = "UsersRound",
   Menu = "Menu",
+  Eye = "Eye",
+  Star = "Star",
+  HandShake = "HandShake",
+  FilePen = "FilePen",
+  SearchCheck = "SearchCheck",
+  CalendarCheck = "CalendarCheck",
 }
 
 interface IconProps {
@@ -39,6 +64,12 @@ const APPICONS = {
   [AppIcons.ExternalLink]: (props: IconProps) => <ExternalLink size={props.size} className={props.className} />,
   [AppIcons.UsersRound]: (props: IconProps) => <UsersRound size={props.size} className={props.className} />,
   [AppIcons.Menu]: (props: IconProps) => <Menu size={props.size} className={props.className} />,
+  [AppIcons.Eye]: (props: IconProps) => <Eye size={props.size} className={props.className} />,
+  [AppIcons.Star]: (props: IconProps) => <Star size={props.size} className={props.className} />,
+  [AppIcons.HandShake]: (props: IconProps) => <Handshake size={props.size} className={props.className} />,
+  [AppIcons.FilePen]: (props: IconProps) => <FilePenLine size={props.size} className={props.className} />,
+  [AppIcons.SearchCheck]: (props: IconProps) => <SearchCheck size={props.size} className={props.className} />,
+  [AppIcons.CalendarCheck]: (props: IconProps) => <CalendarCheck size={props.size} className={props.className} />,
 };
 
 interface IconComponentProps {

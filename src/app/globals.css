@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  scroll-behavior: smooth !important;
+}
+
+main {
+  scroll-behavior: smooth !important;
+}
+
 :root  {
   --background: 262 100% 95%;
   --foreground: 262 5% 0%;

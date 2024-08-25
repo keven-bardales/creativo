@@ -21,13 +21,21 @@ export function MainBlogItem() {
             <h2>¿Por son importantes los</h2>
             <h3 className="text-primary">servicios digitales?</h3>
 
-            <p className="text-base font-light">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque porro nihil blanditiis dolorem similique nemo inventore aut amet
-              mollitia tempora, consequuntur quo id vero reiciendis? Excepturi consequatur eaque ullam itaque? Lorem ipsum dolor sit amet consectetur.
-            </p>
-          </FadeIn>
+            <div className="flex flex-col gap-y-4">
+              <p className="text-base font-light">
+                Los servicios digitales son esenciales para cualquier negocio moderno. Permiten alcanzar a un público más amplio, mejorar la
+                eficiencia operativa y crear experiencias personalizadas para los clientes. En un mundo cada vez más conectado, tu presencia en línea
+                puede ser la diferencia entre el éxito y la irrelevancia.
+              </p>
 
-          <Button className="shrink-0 w-fit min-w-[150px] mt-5 md:mt-auto">Leer más</Button>
+              <p className="text-base font-light">
+                Invertir en servicios digitales no solo fortalece tu marca, sino que también te posiciona como un líder en tu industria. Con
+                estrategias digitales efectivas, puedes anticiparte a las necesidades de tus clientes, optimizar tus procesos internos y obtener datos
+                valiosos para tomar decisiones informadas. El futuro de los negocios es digital, y estar preparado es clave para mantenerse
+                competitivo.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </Card>
     </LandingContainer>
