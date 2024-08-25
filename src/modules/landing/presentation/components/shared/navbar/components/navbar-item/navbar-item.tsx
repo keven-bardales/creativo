@@ -14,7 +14,7 @@ export default function NavbarItem({ navBarItem, className }: NavbarItemProps) {
 
   return (
     <li
-      className={cn("", {
+      className={cn("cursor-pointer hover:underline", {
         [`${className}`]: !!className,
       })}
       onClick={(event) => {
