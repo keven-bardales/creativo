@@ -45,7 +45,7 @@ export default function BrandLogo(props: BrandLogoProps) {
 function BrandLogoVertical(props: BrandLogoProps) {
   return (
     <svg
-      className={cn("", {
+      className={cn("cursor-pointer", {
         [`${props.className}`]: !!props.className,
       })}
       width={props?.width ?? 80}
@@ -104,7 +104,7 @@ function BrandLogoHorizontal(props: BrandLogoProps) {
     <svg
       width={props?.width ?? 130}
       height={props?.height ?? 50}
-      className={cn("", {
+      className={cn("cursor-pointer", {
         [`${props.className}`]: !!props.className,
       })}
       id="Layer_1"
