@@ -21,8 +21,9 @@ export default function LandingLayout({
 }>) {
   return (
     <LandingProviders>
-      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process?.env?.ANALYTICS_LANDING}`}></Script>
+      <Script id="landing-analitycs-link" async src={`https://www.googletagmanager.com/gtag/js?id=${process?.env?.ANALYTICS_LANDING}`}></Script>
       <Script
+        id="landing-analitycs-link-2"
         dangerouslySetInnerHTML={{
           __html: `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${process?.env?.ANALYTICS_LANDING}"></script>
