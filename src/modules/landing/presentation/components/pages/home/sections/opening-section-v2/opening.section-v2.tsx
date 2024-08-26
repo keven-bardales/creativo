@@ -14,7 +14,7 @@ export default function OpeningSectionV2() {
     <>
       <LandingContainer className={cn("flex flex-col lg:flex-row justify-between")}>
         <div className="flex flex-col lg:gap-y-6 w-full lg:max-w-[44%] lg:pt-5">
-          <FadeIn as="div" className="flex flex-col gap-y-4 w-full">
+          <div className="flex flex-col gap-y-4 w-full">
             <div className="flex flex-col text-center items-center md:text-7xl lg:text-left lg:items-start gap-4 font-bold text-4xl sm:text-6xl lg:text-6xl">
               <h1>El éxito de tu</h1>
               <h2>marca empieza</h2>
@@ -31,20 +31,16 @@ export default function OpeningSectionV2() {
               {" "}
               Incrementa tu base de clientes con <strong className="text-primary font-bold">Creativo</strong> y estrategias dirigidas.
             </h3>
-          </FadeIn>
+          </div>
 
-          <FadeIn as="div" className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto lg:ml-0 lg:mr-0">
+          <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto lg:ml-0 lg:mr-0">
             <Button className="grow shrink-0">Obtén tu propuesta gratuita</Button>
             <Button className="grow shrink-0" variant={ButtonVariants.OUTLINE}>
               Explicame Como funciona
             </Button>
-          </FadeIn>
+          </div>
 
-          <FadeIn
-            delay={0.1}
-            as="div"
-            className="flex justify-center gap-2 lg:gap-x-5 pt-10 font-bold md:semi-bold flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto lg:justify-start lg:ml-0 lg:mr-0"
-          >
+          <div className="flex justify-center gap-2 lg:gap-x-5 pt-10 font-bold md:semi-bold flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto lg:justify-start lg:ml-0 lg:mr-0">
             <div>Diseño web</div>
 
             <div className="font-bold">/</div>
@@ -62,14 +58,10 @@ export default function OpeningSectionV2() {
             <div className="font-bold">/</div>
 
             <div>Identidad de marca</div>
-          </FadeIn>
+          </div>
         </div>
 
-        <FadeIn
-          delay={0.1}
-          as="div"
-          className="h-[85vh] w-full lg:w-[50%] min-h-[600px] max-h-[600px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0"
-        >
+        <div className="h-[85vh] w-full lg:w-[50%] min-h-[600px] max-h-[600px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0">
           <div
             style={{
               backgroundImage: `url(${herobg.src})`,
@@ -89,7 +81,7 @@ export default function OpeningSectionV2() {
           <div className="absolute z-[10] bottom-0 h-[25px] right-[40%] w-[25px] bg-transparent rounded-[50%] shadow-hero-rounded-bottom"></div>
 
           <CardForStatistics />
-        </FadeIn>
+        </div>
 
         <CardForStatistics
           descriptionClassName="text-xl text-center"
