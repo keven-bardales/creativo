@@ -52,13 +52,13 @@ export default function ValuesCarousel() {
 
   return (
     <Carousel setApi={setApi} className="w-full mt-5 relative" opts={{ slidesToScroll: 1 }}>
-      <CarouselContent className="w-full flex lg:p-10 pb-14 lg:pb-16 ml-4 gap-x-4">
+      <CarouselContent className="w-full flex lg:p-10 pb-14 lg:pb-16 ml-4 gap-x-4 text-primary-foreground">
         {VALUES.map((value) => (
           <CarouselItem key={value.title} className="flex shadow-2xl dark:bg-secondary rounded-3xl flex-col gap-y-5 p-4 max-w-[90%] sm:max-w-[55%]">
             <FadeIn as="div" className="text-lg lg:text-4xl flex items-center gap-x-2">
               <Icon className="h-8 w-8 text-primary" name={value.icon}></Icon> <div> {value.title}</div>
             </FadeIn>
-            <FadeIn as="div" className="text-base lg:text-xl text-muted-foreground">
+            <FadeIn as="div" className="text-base lg:text-xl text-primary-foreground">
               {value.description}
             </FadeIn>
           </CarouselItem>

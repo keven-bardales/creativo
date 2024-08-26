@@ -2,6 +2,7 @@
 
 import React, { ReactHTML } from "react";
 import { HTMLMotionProps, motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
 export type TagNameType = keyof ReactHTML;
 

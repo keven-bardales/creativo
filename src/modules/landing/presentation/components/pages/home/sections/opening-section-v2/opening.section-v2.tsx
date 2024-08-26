@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
 import CardForStatistics from "./components/card-for-statistics/card-for-statistics";
 import DedicationCard from "./components/dedication-card/dedication-card";
+import Image from "next/image";
 
 export default function OpeningSectionV2() {
   return (
@@ -61,12 +62,7 @@ export default function OpeningSectionV2() {
         </div>
 
         <div className="h-[85vh] w-full lg:w-[50%] min-h-[600px] max-h-[600px] bg-background relative rounded-3xl mt-14 lg:mt-5 border-none border-0">
-          <div
-            style={{
-              backgroundImage: `url(${herobg.src})`,
-            }}
-            className="w-full h-full bg-cover bg-center rounded-3xl"
-          ></div>
+          <Image width={512} height={512} src={herobg.src} alt="hero" className="w-full h-full object-cover object-center rounded-3xl"></Image>
           <div className="bg-background top-0 left-0 z-[10] absolute h-[20%] w-[30%] rounded-br-3xl"></div>
           <div className="absolute z-[10] top-0 h-[25px] left-[30%] w-[25px] rounded-[50%] shadow-hero-rounded-top"></div>
           <div className="absolute z-[10] top-[20%] h-[25px] left-[0] w-[25px] bg-transparent rounded-[50%] shadow-hero-rounded-top"></div>

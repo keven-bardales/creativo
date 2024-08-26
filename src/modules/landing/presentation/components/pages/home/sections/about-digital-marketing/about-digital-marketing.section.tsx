@@ -4,6 +4,7 @@ import Card from "@/modules/shared/presentation/components/ui/card/card";
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
 import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
+import Image from "next/image";
 
 export function AboutDigitalMarketingSection() {
   return (
@@ -15,12 +16,13 @@ export function AboutDigitalMarketingSection() {
 
       <FadeIn as="div" className="w-full flex-col lg:flex-row flex mt-10 gap-x-7 gap-y-8">
         <Card className="h-auto md:min-h-[400px] w-full lg:max-w-[48%] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl gap-x-5 flex flex-col md:flex-row">
-          <div
-            style={{
-              backgroundImage: `url(${herobg.src})`,
-            }}
-            className="md:w-[35%] w-full h-[300px] rounded-t-3xl md:!rounded-r-none  md:h-full bg-card md:!rounded-l-3xl shrink-0 bg-cover bg-center"
-          ></div>
+          <Image
+            src={herobg.src}
+            alt="hero"
+            width={312}
+            height={312}
+            className="md:w-[35%] w-full rounded-t-3xl md:!rounded-r-none  md:h-full bg-card md:!rounded-l-3xl shrink-0 object-cover"
+          ></Image>
           <div className="flex flex-col justify-between p-3 gap-y-8">
             <div className="p-4 rounded-3xl bg-primary w-fit mx-auto md:ml-0 md:mr-0">
               <Icon className="text-primary-foreground" size={40} name={AppIcons.Globe} />
