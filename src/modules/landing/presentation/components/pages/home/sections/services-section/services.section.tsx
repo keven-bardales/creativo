@@ -5,15 +5,15 @@ import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/m
 import { SERVICES } from "@/modules/landing/presentation/constants/services.constant";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
 import Image from "next/image";
-import { FadeInStagger, FadeInStaggredChildren } from "@/modules/shared/presentation/components/framer/fade-in";
+import { FadeIn, FadeInStagger, FadeInStaggredChildren } from "@/modules/shared/presentation/components/framer/fade-in";
 
 export function ServicesSection() {
   return (
     <LandingContainer className={cn("flex flex-col gap-y-3")}>
-      <div className="flex flex-col gap-y-3 text-center font-bold text-4xl sm:text-5xl xl:text-6xl col-span-full mb-4">
+      <FadeIn as="div" className="flex flex-col gap-y-3 text-center font-bold text-4xl sm:text-5xl xl:text-6xl col-span-full mb-4">
         <h2>Construye tu marca con</h2>
         <h3 className="text-primary">nuestros servicios</h3>
-      </div>
+      </FadeIn>
 
       <FadeInStagger as="div" className="relative flex-col sm:flex-row gap-y-8 md:flex-row flex flex-wrap justify-evenly lg:gap-y-4 w-full">
         {SERVICES.map((item, index) => {
