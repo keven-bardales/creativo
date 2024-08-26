@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
 import CardForStatistics from "./components/card-for-statistics/card-for-statistics";
 import DedicationCard from "./components/dedication-card/dedication-card";
-import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 
 export default function OpeningSectionV2() {
   return (
