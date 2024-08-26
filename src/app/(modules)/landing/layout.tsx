@@ -6,6 +6,7 @@ import LandingSection from "@/modules/landing/presentation/components/shared/lan
 import LandingNavbar from "@/modules/landing/presentation/components/shared/navbar/landing-navbar";
 import LandingFooter from "@/modules/landing/presentation/components/shared/footer/footer";
 import Script from "next/script";
+import GoogleAnalyticsLanding from "@/modules/landing/presentation/components/shared/google-analytics/google-analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,18 +22,7 @@ export default function LandingLayout({
 }>) {
   return (
     <LandingProviders>
-      <Script id="landing-analitycs-link" async src={`https://www.googletagmanager.com/gtag/js?id=${process?.env?.ANALYTICS_LANDING}`}></Script>
-      <Script
-        id="landing-analitycs-link-2"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process?.env?.ANALYTICS_LANDING}');
-          `,
-        }}
-      ></Script>
+      <GoogleAnalyticsLanding />
       <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col">
         <LandingSection id="nav" className="fixed top-0 z-[50] bg-background">
           <LandingNavbar />
