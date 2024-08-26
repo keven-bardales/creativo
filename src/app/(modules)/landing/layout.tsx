@@ -26,14 +26,11 @@ export default function LandingLayout({
         id="landing-analitycs-link-2"
         dangerouslySetInnerHTML={{
           __html: `
-<script async src="https://www.googletagmanager.com/gtag/js?id=${process?.env?.ANALYTICS_LANDING}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '${process?.env?.ANALYTICS_LANDING}');
-</script>`,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process?.env?.ANALYTICS_LANDING}');
+          `,
         }}
       ></Script>
       <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col">
