@@ -24,11 +24,11 @@ export function MainBlogItem() {
           ></Image>
         </FadeIn>
         <div className="flex flex-col p-3 md:pb-10">
-          <FadeIn as="div" className="flex flex-col gap-y-3 font-bold text-2xl sm:text-4xl xl:text-6xl text-primary-foreground">
+          <FadeIn as="div" className="flex flex-col gap-y-3 font-bold text-2xl sm:text-4xl xl:text-6xl">
             <h2>¿Por son importantes los</h2>
             <h3 className="text-primary">servicios digitales?</h3>
 
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-4 dark:text-foreground">
               <p className="text-base font-light">
                 Los servicios digitales son esenciales para cualquier negocio moderno. Permiten alcanzar a un público más amplio, mejorar la
                 eficiencia operativa y crear experiencias personalizadas para los clientes. En un mundo cada vez más conectado, tu presencia en línea
