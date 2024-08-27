@@ -8,6 +8,7 @@ import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
 import CardForStatistics from "./components/card-for-statistics/card-for-statistics";
 import DedicationCard from "./components/dedication-card/dedication-card";
 import Image from "next/image";
+import { ContactDialog } from "../../../../shared/contact/first-contact-dialog";
 
 export default function OpeningSectionV2() {
   return (
@@ -34,7 +35,7 @@ export default function OpeningSectionV2() {
           </div>
 
           <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto lg:ml-0 lg:mr-0">
-            <Button className="grow shrink-0">Obtén tu propuesta gratuita</Button>
+            <ContactDialog />
             <Button className="grow shrink-0" variant={ButtonVariants.OUTLINE}>
               Explicame Como funciona
             </Button>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster";
 
 import "@/app/globals.css";
 import { cn } from "@/lib/utils";
@@ -18,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning={true} lang="es">
-      <body className={`${cn("bg-background", inter.className)}`}>{children}</body>
+      <body className={`${cn("bg-background", inter.className)}`}>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }
