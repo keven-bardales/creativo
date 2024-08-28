@@ -9,6 +9,7 @@ import CardForStatistics from "./components/card-for-statistics/card-for-statist
 import DedicationCard from "./components/dedication-card/dedication-card";
 import Image from "next/image";
 import { ContactDialog } from "../../../../shared/contact/first-contact-dialog";
+import { ExplanationDialog } from "../../../../shared/explain-how-works-dialog/explain-how-works-dialog";
 
 export default function OpeningSectionV2() {
   return (
@@ -36,9 +37,7 @@ export default function OpeningSectionV2() {
 
           <div className="flex gap-x-4 sm:w-fit flex-wrap gap-y-5 ml-auto mr-auto lg:ml-0 lg:mr-0">
             <ContactDialog />
-            <Button className="grow shrink-0" variant={ButtonVariants.OUTLINE}>
-              Explicame Como funciona
-            </Button>
+            <ExplanationDialog />
           </div>
 
           <div className="flex justify-center gap-2 lg:gap-x-5 pt-10 font-bold md:semi-bold flex-wrap text-foreground gap-y-3 text-sm sm:text-base items-center md:text-xl lg:max-w-[80%] ml-auto mr-auto lg:justify-start lg:ml-0 lg:mr-0">
