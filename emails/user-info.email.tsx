@@ -13,7 +13,12 @@ export const UserInformationEmail = ({ userFirstname, userEmail, userDescription
     <Preview>Nuevo contacto de usuario - Creativo</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={`/static/hoz_purplelogo_darktext_title.png`} width="180" alt="Creativo" style={logo} />
+        <Img
+          src={`https://raw.githubusercontent.com/keven-bardales/creativo/main/public/hoz_purplelogo_darktext_title.png`}
+          width="180"
+          alt="Creativo"
+          style={logo}
+        />
         <Text style={paragraph}>Hola,</Text>
         <Text style={paragraph}>Has recibido un nuevo contacto de usuario. A continuación, se detalla la información proporcionada:</Text>
         <Text style={paragraph}>

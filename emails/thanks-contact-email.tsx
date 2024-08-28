@@ -13,7 +13,12 @@ export const CreativoThankYouEmail = ({ userFirstname }: CreativoThankYouEmailPr
     <Preview>Gracias por contactarnos - Creativo</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={`/static/hoz_purplelogo_darktext_title.png`} width="180" alt="Creativo" style={logo} />
+        <Img
+          src={`https://raw.githubusercontent.com/keven-bardales/creativo/main/public/hoz_purplelogo_darktext_title.png`}
+          width="180"
+          alt="Creativo"
+          style={logo}
+        />
         <Text style={paragraph}>Hola {userFirstname},</Text>
         <Text style={paragraph}>
           ¡Gracias por ponerte en contacto con nosotros! Hemos recibido tu información y nos pondremos en contacto contigo lo antes posible para

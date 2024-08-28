@@ -58,11 +58,11 @@ export async function sendUserInfoEmail(options: { userFirstname: string; userEm
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
     auth: {
-      user: "tu_email@gmail.com",
-      pass: "tu_password_o_app_password",
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
     },
   });
 
