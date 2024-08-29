@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning={true} lang="es">
-      <body className={`${cn("bg-background", inter.className)}`}>
+    <html className="scrollbar-thin scrollbar-track-secondary scrollbar-thumb-primary overflow-x-hidden" suppressHydrationWarning={true} lang="es">
+      <body className={`${cn("bg-background !m-0 overflow-x-hidden w-full max-w-full", inter.className)}`}>
         <Toaster />
         {children}
       </body>

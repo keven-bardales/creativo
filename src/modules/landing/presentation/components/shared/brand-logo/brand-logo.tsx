@@ -2,6 +2,8 @@
 import { cn } from "@/lib/utils";
 import { useLandingNavStore } from "../../../stores/nav-bar.store";
 import handleElementIntoView from "@/modules/shared/presentation/utils/handle-into-view/handle-element-into-view";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface BrandLogoProps {
   className?: string;
@@ -15,6 +17,8 @@ interface BrandLogoProps {
 }
 
 export default function BrandLogo(props: BrandLogoProps) {
+  const pathname = usePathname();
+
   const setIsOpenMobileMenu = useLandingNavStore((state) => state.setIsOpenMobileMenu);
 
   const getComponent = () => {
@@ -31,14 +35,14 @@ export default function BrandLogo(props: BrandLogoProps) {
   const Component = getComponent();
 
   return (
-    <div
-      onClick={() => {
-        handleElementIntoView("main");
+    <Link
+      href={pathname === "/landing" ? "#" : "/landing"}
+      onClick={(event) => {
         setIsOpenMobileMenu(false);
       }}
     >
       <Component {...props} />
-    </div>
+    </Link>
   );
 }
 

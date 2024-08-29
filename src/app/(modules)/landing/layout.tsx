@@ -40,7 +40,7 @@ export default function LandingLayout({
   return (
     <LandingProviders>
       <GoogleAnalyticsLanding />
-      <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col">
+      <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col w-full max-w-full">
         <LandingSection id="nav" className="fixed top-0 z-[50] bg-background">
           <LandingNavbar />
         </LandingSection>

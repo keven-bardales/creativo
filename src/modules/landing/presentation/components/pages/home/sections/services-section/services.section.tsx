@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
 import LandingContainer from "../../../../shared/landing-container/landing-container";
-import Card from "@/modules/shared/presentation/components/ui/card/card";
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 import { SERVICES } from "@/modules/landing/presentation/constants/services.constant";
-import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
+import image1 from "@root/public/landing/news/pexels-canvastudio-3194521.jpg";
+import image2 from "@root/public/landing/news/pexels-danny-meneses-340146-943096.jpg";
+import image3 from "@root/public/landing/news/pexels-divinetechygirl-1181346.jpg";
 import Image from "next/image";
 import { FadeIn, FadeInStagger, FadeInStaggredChildren } from "@/modules/shared/presentation/components/framer/fade-in";
 
@@ -47,24 +48,24 @@ export function ServicesSection() {
               {item?.imagesOnTop && (
                 <>
                   <Image
-                    src={herobg.src}
+                    src={image1.src}
                     alt="hero"
-                    width={512}
-                    height={512}
+                    width={312}
+                    height={312}
                     className="rounded-sm absolute left-[10%] top-0 max-w-[35%] sm:max-w-[55%] -rotate-12 z-40" // Z-index superior para las imágenes
                   />
                   <Image
-                    src={herobg.src}
+                    src={image2.src}
                     alt="hero"
-                    width={512}
-                    height={512}
+                    width={312}
+                    height={312}
                     className="rounded-sm absolute left-[20%] top-[34%] max-w-[35%] sm:max-w-[55%] rotate-2 z-40" // Z-index superior para las imágenes
                   />
                   <Image
-                    src={herobg.src}
+                    src={image3.src}
                     alt="hero"
-                    width={512}
-                    height={512}
+                    width={312}
+                    height={312}
                     className="rounded-sm absolute left-[10%] top-[70%] max-w-[35%] sm:max-w-[55%] rotate-[25deg] z-40" // Z-index superior para las imágenes
                   />
                 </>

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { NAVBARITEMS } from "../../../../../constants/nav-bar-items.constant";
 import { useLandingNavStore } from "../../../../../stores/nav-bar.store";
-import handleLandingElementIntoView from "@/modules/shared/presentation/utils/handle-into-view/handle-element-into-view";
+import { usePathname } from "next/navigation";
 
 interface NavbarItemProps {
   className?: string;
@@ -11,18 +11,18 @@ interface NavbarItemProps {
 }
 export default function NavbarItem({ navBarItem, className }: NavbarItemProps) {
   const setMobileMenu = useLandingNavStore((state) => state.setIsOpenMobileMenu);
-
+  const pathName = usePathname();
   return (
-    <li
+    <Link
+      href={pathName === "/landing" ? `#${navBarItem.idSection}` : `/landing#${navBarItem.idSection}`}
       className={cn("cursor-pointer hover:underline", {
         [`${className}`]: !!className,
       })}
       onClick={(event) => {
-        handleLandingElementIntoView(navBarItem.idSection);
         setMobileMenu(false);
       }}
     >
       {navBarItem.name}
-    </li>
+    </Link>
   );
 }

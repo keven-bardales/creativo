@@ -5,15 +5,10 @@
 
 html {
   scroll-behavior: smooth !important;
+  scroll-padding-top: 80px;
 }
 
-body {
-  scroll-behavior: smooth !important;
-}
 
-main {
-  scroll-behavior: smooth !important;
-}
 
 :root  {
   --background: 262 100% 95%;
@@ -91,4 +86,9 @@ main {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+}
+
+
+.pointerEventsInherit {
+  pointer-events: inherit !important;
 }

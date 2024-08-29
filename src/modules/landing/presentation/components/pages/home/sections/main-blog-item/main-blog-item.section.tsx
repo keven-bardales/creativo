@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
 import LandingContainer from "../../../../shared/landing-container/landing-container";
 import Card from "@/modules/shared/presentation/components/ui/card/card";
-import Button from "@/modules/shared/presentation/components/ui/button/button";
-import herobg from "@root/public/mocks/pexels-kindelmedia-7688336.jpg";
+import imageForCard from "@root/public/landing/news/pexels-kaboompics-6224.jpg";
 import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 import Image from "next/image";
 
@@ -15,7 +14,7 @@ export function MainBlogItem() {
           className="md:w-[40%] w-full h-[300px] md:h-full bg-card md:!rounded-l-3xl shrink-0 bg-cover bg-center rounded-t-3xl md:rounded-r-none"
         >
           <Image
-            src={herobg.src}
+            src={imageForCard.src}
             alt="hero"
             width={512}
             height={512}

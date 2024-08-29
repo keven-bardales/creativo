@@ -10,6 +10,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 import { NAVBARITEMS } from "../../../constants/nav-bar-items.constant";
 import MobileNavbar from "./components/mobile-menu/mobile-navbar";
+import { ContactDialog } from "../contact/first-contact-dialog";
 
 interface LandingNavbarProps {
   className?: string;
@@ -29,7 +30,7 @@ export default function LandingNavbar(props: LandingNavbarProps) {
       <div className="flex items-center gap-x-4">
         <ModeToggle />
         <MobileNavbar />
-        <Button className="hidden md:flex">Contacto</Button>
+        <ContactDialog className="hidden md:flex" buttonText="Contacto"></ContactDialog>
       </div>
     </LandingContainer>
   );
