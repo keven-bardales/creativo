@@ -15,7 +15,7 @@ export function AboutDigitalMarketingSection() {
       </FadeIn>
 
       <FadeIn as="div" className="w-full flex-col lg:flex-row flex mt-10 gap-x-7 gap-y-8">
-        <Card className="h-auto md:min-h-[400px] w-full lg:max-w-[48%] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl gap-x-5 flex flex-col md:flex-row">
+        <Card className="h-auto md:min-h-[400px] w-full lg:max-w-[48%] dark:border-none border dark:bg-secondary gap-x-5 flex flex-col md:flex-row">
           <Image
             src={chartsImage.src}
             alt="hero"
@@ -49,7 +49,7 @@ export function AboutDigitalMarketingSection() {
         </Card>
 
         <div className="flex flex-col md:flex-row lg:max-w-[48%] gap-x-7 gap-y-5">
-          <Card className="max-h-[300px] sm:max-h-[400px] min-h-[400px] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full p-3 gap-x-5">
+          <Card className="max-h-[300px] sm:max-h-[400px] min-h-[400px] dark:border-none border dark:bg-secondary flex md:!w-fit w-full p-3 gap-x-5">
             <div className="flex flex-col justify-between">
               <div className="p-4 rounded-3xl bg-primary w-fit mx-auto md:ml-0 md:mr-0">
                 <Icon className="text-primary-foreground" size={40} name={AppIcons.Globe} />
@@ -65,7 +65,7 @@ export function AboutDigitalMarketingSection() {
             </div>
           </Card>
 
-          <Card className="max-h-[300px] sm:max-h-[400px] min-h-[400px] bg-transparent dark:border-none border dark:bg-secondary shadow-2xl flex md:!w-fit w-full p-3 gap-x-5">
+          <Card className="max-h-[300px] sm:max-h-[400px] min-h-[400px] dark:border-none border dark:bg-secondary flex md:!w-fit w-full p-3 gap-x-5">
             <div className="flex flex-col justify-between">
               <div className="p-4 rounded-3xl bg-primary w-fit mx-auto md:ml-0 md:mr-0">
                 <Icon className="text-primary-foreground" size={40} name={AppIcons.Globe} />

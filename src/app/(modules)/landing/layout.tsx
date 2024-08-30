@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   bookmarks: "Creativo",
   assets: "Creativo",
   creator: "Creativo",
-  description: "Creativo es una agencia de marketing digital que ayuda a las empresas a crecer en el mundo digital.",
+  description: "Creativo es una agencia de marketing digital y desarrollo de software que ayuda a las empresas a crecer en el mundo digital.",
   generator: "Creativo",
   icons: "Creativo",
   robots: "index, follow",
@@ -40,7 +40,7 @@ export default function LandingLayout({
   return (
     <LandingProviders>
       <GoogleAnalyticsLanding />
-      <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col w-full max-w-full">
+      <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col w-full max-w-full grow">
         <LandingSection id="nav" className="fixed top-0 z-[50] bg-background">
           <LandingNavbar />
         </LandingSection>

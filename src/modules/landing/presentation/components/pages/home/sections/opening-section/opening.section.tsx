@@ -16,7 +16,7 @@ export default function OpeningSection() {
           <h3 className="font-light">Impress your customers, straight to the point</h3>
         </div>
         <div className="mx-auto flex flex-col gap-y-4 px-5">
-          <Button size={ButtonSizes.XL} className="w-fit mx-auto shadow-2xl">
+          <Button size={ButtonSizes.XL} className="w-fit mx-auto">
             Get Started <Icon name={AppIcons.ChevronRight} />
           </Button>
           <h3 className="font-light">Free plan, no card required</h3>

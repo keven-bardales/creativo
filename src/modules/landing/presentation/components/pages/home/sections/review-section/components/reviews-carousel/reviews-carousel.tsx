@@ -26,10 +26,7 @@ export default function ReviewsCarousel() {
     <Carousel setApi={setApi} className="w-full mt-5 relative" opts={{ slidesToScroll: 1 }}>
       <CarouselContent className="w-full flex lg:p-10 pb-14 lg:pb-16 ml-4 gap-x-4">
         {REVIEWS.map((review) => (
-          <CarouselItem
-            key={review.comment}
-            className="flex shadow-2xl dark:bg-secondary rounded-3xl flex-col gap-y-5 p-4 max-w-[90%] sm:max-w-[55%]"
-          >
+          <CarouselItem key={review.comment} className="flex dark:bg-secondary rounded-3xl flex-col gap-y-5 p-4 max-w-[90%] sm:max-w-[55%]">
             <FadeIn as="div" className="text-lg lg:text-4xl">
               {'"'}
               {review.comment}

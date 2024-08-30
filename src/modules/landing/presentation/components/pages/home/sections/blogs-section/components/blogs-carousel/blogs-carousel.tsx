@@ -39,7 +39,7 @@ export default function BlogsCarousel() {
           {BLOGS.map((blog) => (
             <CarouselItem
               key={blog.id}
-              className="flex flex-col w-full gap-y-3 max-w-[95%] sm:max-w-[45%] lg:max-w-[40%] p-5 box-border shadow-2xl rounded-2xl dark:bg-secondary"
+              className="flex flex-col w-full gap-y-3 max-w-[95%] sm:max-w-[45%] lg:max-w-[40%] p-5 box-border rounded-2xl bg-card dark:bg-secondary"
             >
               <FadeIn as="div" className="flex flex-col gap-y-3">
                 <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto lg:min-h-[250px] w-full" />
