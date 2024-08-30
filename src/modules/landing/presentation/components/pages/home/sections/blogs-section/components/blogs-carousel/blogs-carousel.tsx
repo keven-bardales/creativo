@@ -1,6 +1,6 @@
 "use client";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { BLOGS } from "@/modules/landing/presentation/constants/blogs.constant";
+import { NEWS } from "@/modules/landing/presentation/constants/blogs.constant";
 import { FadeIn } from "@/modules/shared/presentation/components/framer/fade-in";
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 import Image from "next/image";
@@ -36,9 +36,9 @@ export default function BlogsCarousel() {
         }}
       >
         <CarouselContent className="w-full flex p-6 pb-16 gap-x-5">
-          {BLOGS.map((blog) => (
+          {NEWS.map((blog) => (
             <CarouselItem
-              key={blog.id}
+              key={blog.title}
               className="flex flex-col w-full gap-y-3 max-w-[95%] sm:max-w-[45%] lg:max-w-[40%] p-5 box-border rounded-2xl bg-card dark:bg-secondary"
             >
               <FadeIn as="div" className="flex flex-col gap-y-3">
@@ -49,7 +49,9 @@ export default function BlogsCarousel() {
                     <h3 className="sm:text-lg font-bold">{blog.title}</h3>
                     <p className="text-sm">{blog.excerpt}</p>
                   </div>
-                  <BlogReadMoreItem blog={blog} />
+                  <Link href={`/landing/news/${blog.title}`} className="bg-primary text-primary-foreground rounded-3xl p-3 !max-h-fit mt-2">
+                    <Icon name={AppIcons.Eye} className="h-4 w-4 md:h-4 md:w-4" />
+                  </Link>
                 </div>
               </FadeIn>
             </CarouselItem>

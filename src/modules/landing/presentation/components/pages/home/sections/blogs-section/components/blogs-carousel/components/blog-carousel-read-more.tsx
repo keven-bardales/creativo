@@ -1,6 +1,6 @@
 "use client";
 
-import { BLOGS } from "@/modules/landing/presentation/constants/blogs.constant";
+import { NEWS } from "@/modules/landing/presentation/constants/blogs.constant";
 import Icon, { AppIcons } from "@/modules/shared/presentation/components/icons/main-icon/main-icon";
 import Link from "next/link";
 
@@ -9,7 +9,7 @@ import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface BlogReadMoreItemProps {
-  blog: (typeof BLOGS)[0];
+  blog: (typeof NEWS)[0];
 }
 
 export default function BlogReadMoreItem({ blog }: BlogReadMoreItemProps) {
@@ -35,7 +35,7 @@ export default function BlogReadMoreItem({ blog }: BlogReadMoreItemProps) {
           <ScrollArea className="max-h-[80vh] p-5 pt-0">
             <DialogDescription>
               <Image src={blog.image} alt={blog.image} width={500} height={300} className="rounded-sm mx-auto mb-4" />
-              <p className="text-base leading-relaxed text-left text-foreground">{blog.content}</p>
+              <p className="text-base leading-relaxed text-left text-foreground">{blog.excerpt}</p>
             </DialogDescription>
           </ScrollArea>
         </DialogContent>
